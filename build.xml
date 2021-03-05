@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<project name="havis.util.hal" default="publish">
+
+	<property file="${basedir}/build.properties" />
+
+	<import>
+		<url url="${ivy.url}/ant/default.xml" />
+	</import>
+
+	<target name="clean-cache">
+		<clean-cache />
+	</target>
+
+	<target name="clean-all">
+		<clean-all />
+	</target>
+
+	<target name="prepare-resources">
+		<copy file="${resources.dir}/hal.js" tofile="${build.dir}/hal.js" overwrite="true" />
+		<copy file="${resources.dir}/aes.js" tofile="${build.dir}/aes.js" overwrite="true" />
+	</target>
+
+	<target name="compile">
+		<compile>
+			<src path="${src.main.dir}" />
+		</compile>
+	</target>
+
+	<target name="publish" depends="compile" description="Publishes the JAR to the repository">
+		<copy todir="${build.dir}">
+			<fileset dir="${resources.dir}" includes="*.js" />
+		</copy>
+		<publish app="false" />
+	</target>
+
+</project>
+
+

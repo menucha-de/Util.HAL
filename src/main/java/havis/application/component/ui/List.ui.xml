@@ -1,0 +1,65 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.table-container {
+			position: relative;
+			padding-top: 2ex;
+		}
+		
+		.table-header {
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 0;
+			height: 2ex;
+		}
+		
+		.table-outer {
+			height: 100%;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		
+		.table-inner {
+			overflow-x: hidden;
+			overflow-y: auto;
+			width: 100%;
+			border-collapse: collapse;
+		}
+		
+		.table-inner > thead > tr > th > div {
+			position: absolute;
+			top: 0;
+		}
+		
+		.table td:hover {
+			cursor: pointer;
+		}
+		
+		.table>tbody>tr>td {
+			padding: 3px;
+		}
+		
+		.table>tbody>tr>td:last-child {
+			width: 100%;
+		}
+		
+		.table>tbody>tr:nth-child\(even\) {
+			background-color: #FDFDFD;
+		}
+		
+		.table>tbody>tr:nth-child\(odd\) {
+			background-color: #F0F0F0;
+		}
+	</ui:style>
+	<g:FocusPanel ui:field="panel" styleName="havis-List">
+		<g:FlowPanel styleName="{style.table-container} havis-List-container">
+			<g:SimplePanel styleName="{style.table-header} havis-List-header" />
+			<g:SimplePanel styleName="{style.table-outer}">
+				<g:FlexTable ui:field="table"
+					styleName="{style.table-inner} {style.table} havis-List-Items" />
+			</g:SimplePanel>
+			</g:FlowPanel>
+	</g:FocusPanel>
+</ui:UiBinder> 

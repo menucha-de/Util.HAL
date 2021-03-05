@@ -1,0 +1,6 @@
+Implementation-Version: 2.7
+Bundle-Name: Ha-VIS HAL
+Bundle-SymbolicName: havis.util.hal
+Bundle-Vendor: HARTING IT_SD
+Bundle-Version: 2.7.0
+Bundle-ManifestVersion: 2
