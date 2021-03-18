@@ -1,8 +1,6 @@
-/*!
- * FILE NAME                : hal.js
- * HOLDER OF RIGHTS OF USE	: HARTING IT Software Development GmbH & Co. KG
- * DESCRIPTION				: This javascript library provides a wrapper for the HaVIS Application Suite Client IOService and 
- *							  System service to send JSON-RPCs via direct calls
+/*
+ * This javascript library provides a wrapper for the HaVIS Application Suite Client IOService and 
+ * System service to send JSON-RPCs via direct calls
  */
 var hal = {
     replacedWebSockets: {},
